@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="register-container">
+        <h2>Inscription</h2>
+        <form id="registerForm" onsubmit="return registerUser()">
+            <div class="form-group">
+                <input type="text" id="newUsername" placeholder="Nouvel identifiant" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="newPassword" placeholder="Nouveau mot de passe" required>
+            </div>
+            <button type="submit" class="btn">Créer un compte</button>
+        </form>
+    </div>
+
+    <script>
+        function registerUser() {
+            // Ici, vous devriez envoyer les données du formulaire vers votre backend pour le traitement.
+            // À titre d'exemple, je vais simplement simuler la création de compte.
+
+            var newUsername = document.getElementById('newUsername').value;
+            var newPassword = document.getElementById('newPassword').value;
+
+            // Vous pouvez ajouter ici la logique pour enregistrer le nouvel utilisateur, par exemple :
+            alert('Compte créé avec succès pour ' + newUsername);
+            return false; // Empêche le formulaire de se soumettre normalement
+        }
+    </script>
+</body>
+</html>
